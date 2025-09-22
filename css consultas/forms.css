@@ -1,0 +1,117 @@
+/* --- SEÇÃO DE AGENDAMENTO (FORMULÁRIO) --- */
+.section-booking {
+    background-color: #2A4674; /* Cor de fundo suave para a seção */
+}
+
+.form-container {
+    max-width: 700px;
+    margin: 0 auto; /* Centraliza o container do formulário */
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    text-align: center;
+    color: #192a56; /* Azul escuro do Hero */
+    margin-bottom: 10px;
+}
+
+.form-container p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label,
+.form-group legend {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="tel"],
+.booking-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.booking-form input[type="text"]:focus,
+.booking-form input[type="tel"]:focus,
+.booking-form textarea:focus {
+    outline: none;
+    border-color: #3498db; /* Azul do botão secundário */
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.booking-form textarea {
+    resize: vertical; /* Permite que o usuário redimensione a altura */
+}
+
+/* Estilizando os Radio Buttons */
+.form-group fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.radio-group {
+    display: flex;
+    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    gap: 15px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 8px;
+    /* Para um visual mais moderno, considere usar custom radio buttons */
+}
+
+/* Botão de Envio */
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #e74c3c; /* Vermelho/Rosa do botão primário */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #c0392b;
+    transform: translateY(-2px);
+}
+
+booking-layout {
+    display: flex;
+    align-items: center; /* Alinha verticalmente a imagem e o formulário */
+    gap: 50px; /* Espaço entre a imagem e o formulário */
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px B30px rgba(0, 0, 0, 0.1);
+}
+
