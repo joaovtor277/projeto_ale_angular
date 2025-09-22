@@ -1,0 +1,130 @@
+/* --- SEÇÃO HERO (INÍCIO) --- */
+.section-hero {
+    background-color: #192a56; /* Azul Escuro do modelo */
+    color: #ffffff; /* Texto branco para contraste */
+    padding: 100px 0; /* Aumenta o padding para dar mais espaço */
+    min-height: auto; /* Remove a altura mínima anterior */
+}
+
+.hero-container {
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    gap: 50px; /* Espaço entre a imagem e o texto */
+    flex-wrap: wrap; /* Permite que os itens quebrem para a linha de baixo em telas pequenas */
+    justify-content: center; /* Centraliza horizontalmente em telas pequenas */
+}
+
+.hero-image {
+    flex-shrink: 0; /* Impede que a imagem encolha muito */
+    width: 800px; /* Largura base para a imagem */
+    height: 800px; /* Altura base para a imagem */
+    border-radius: 25%; /* Transforma a imagem em círculo */
+    overflow: hidden; /* Garante que a imagem seja cortada no círculo */
+    border: 8px solid rgba(255, 255, 255, 0.2); /* Borda sutil */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    object-position: center top; /* Ajusta o foco da imagem (pode precisar de ajuste manual) */
+}
+
+.hero-content {
+    flex-grow: 1; 
+    max-width: 550px; 
+}
+
+.hero-content h1 {
+    font-size: 2.8em; 
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #f0f0f0;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px; 
+    flex-wrap: wrap; 
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+}
+
+/* Botão Primário (Vermelho/Rosa) */
+.btn-primary {
+    background-color: #e74c3c; /* Vermelho/Rosa forte */
+    color: #ffffff;
+    border: 2px solid #e74c3c;
+}
+
+.btn-primary:hover {
+    background-color: #c0392b; /* Tom mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+/* Botão Secundário (Azul) */
+.btn-secondary {
+    background-color: #3498db; /* Azul */
+    color: #ffffff;
+    border: 2px solid #3498db;
+}
+
+.btn-secondary:hover {
+    background-color: #2980b9; /* Tom mais escuro no hover */
+    transform: translateY(-2px);
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column; /* Empilha a imagem e o texto em telas menores */
+        text-align: center;
+    }
+    .hero-image {
+        width: 250px; /* Reduz o tamanho da imagem em telas menores */
+        height: 250px;
+        margin-bottom: 30px;
+    }
+    .hero-content h1 {
+        font-size: 2.2em;
+    }
+    .hero-content p {
+        font-size: 1em;
+    }
+    .hero-actions {
+        justify-content: center; /* Centraliza os botões */
+    }
+}
+
+@media (max-width: 500px) {
+    .section-hero {
+        padding: 60px 0;
+    }
+    .hero-content h1 {
+        font-size: 1.8em;
+    }
+    .hero-actions {
+        flex-direction: column; /* Empilha os botões em telas muito pequenas */
+        gap: 15px;
+    }
+    .btn {
+        width: 100%; /* Botões ocupam largura total */
+    }
+}

@@ -1,0 +1,26 @@
+.section {
+    padding: 80px 0; 
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+}
+.section-hero {
+    background-color: #192a56; 
+}
+.section-hero h2 { color: rgba(255, 255, 255, 0.7); } /* Texto claro para contraste */
+
+.section-gallery-quick {
+    background-color: #c7ecee; 
+}
+.section-services {
+    background-color: #fff0c2; 
+}
+.section-testimonials {
+    background-color: #fdf5e6; 
+}
+.section-blog {
+    background-color: #ffddc9; 
+}
+
