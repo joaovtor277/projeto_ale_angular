@@ -1,0 +1,92 @@
+/* --- SEÇÃO "COMO POSSO AJUDAR?" (SERVIÇOS) --- */
+.section-services {
+    background-color: #706fd3; /* Cor de fundo azul/lilás da imagem */
+    color: #ffffff; /* Cor do texto principal (título) */
+}
+
+/* O contêiner interno que tem o fundo mais claro */
+.section-services .container {
+    background-color: #f1f2f6; /* Cor de fundo cinza claro */
+    border-radius: 30px;
+    padding: 60px 300px;
+    max-width: 1200px; /* Aumenta um pouco a largura para comportar melhor os itens */
+}
+
+/* Cabeçalho da seção */
+.section-services .section-header h2 {
+    color: #706fd3; /* Cor do título */
+    font-size: 2.8em;
+    margin-bottom: 10px;
+}
+
+.section-services .section-header p {
+    color: #333333;
+    font-size: 1.1em;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.section-services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.section-services .section-header {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.services-flex {
+    display: flex;
+    justify-content: center;
+    gap: 130px; /* Espaço entre os itens */
+}
+
+.service-item {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-icon {
+    width: 300px;
+    height: 300px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.service-icon:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.service-icon img {
+    max-width: 190px; /* Ajuste o tamanho do ícone aqui */
+    height: auto;
+}
+
+.service-item h3 {
+    color: #8e44ad; /* Cor roxa do texto */
+    font-size: 1.4em;
+    font-weight: 600;
+}
+
+/* --- Responsividade para a seção de serviços --- */
+@media (max-width: 768px) {
+    .section-services .container {
+        padding: 40px 25px;
+    }
+    .service-icon {
+        width: 150px;
+        height: 150px;
+    }
+    .service-icon img {
+        max-width: 80px;
+    }
+    .service-item h3 {
+        font-size: 1.2em;
+    }
+}

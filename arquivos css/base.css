@@ -34,6 +34,17 @@ header nav ul li a{
     font-size: 18px;
 }
 
+.redes_sociais{
+    display: flex;
+    gap: 15px;
+}
+
+.redes_sociais img{
+    width: 45px;
+    height: 50px;
+}
+
+
 .logo_principal{
     width: 170px;
 }

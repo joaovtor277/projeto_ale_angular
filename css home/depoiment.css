@@ -1,0 +1,145 @@
+/* --- SEÇÃO DE DEPOIMENTOS --- */
+.section-testimonials {
+    background-color: #fdf5e6; /* Tom de bege/creme, como na referência */
+    padding: 50px 20px;
+}
+
+.testimonial-card {
+    max-width: 950px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    background-color: #ffffff;
+    padding: 130px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.07);
+}
+
+/* Coluna da Esquerda: Conteúdo */
+.testimonial-content {
+    flex: 1;
+    position: relative; /* Para posicionar a aspa gigante */
+}
+
+.testimonial-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.testimonial-icon {
+    font-size: 1.5rem;
+}
+
+.testimonial-header h4 {
+    font-size: 1rem;
+    color: #555;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.testimonial-quote {
+    border: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.testimonial-quote p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #333;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Aspa gigante decorativa */
+.quote-mark {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    font-size: 8em;
+    color: #f1f2f6; /* Cor bem clara para ficar no fundo */
+    z-index: 1;
+    line-height: 1;
+    user-select: none; /* Impede que o usuário selecione a aspa */
+}
+
+.testimonial-quote p, .testimonial-author {
+    position: relative;
+    z-index: 2; /* Garante que o texto fique na frente da aspa */
+}
+
+.testimonial-author {
+    font-size: 1.1em;
+}
+
+.testimonial-author strong {
+    display: block;
+    color: #192a56; /* Azul escuro */
+}
+
+.testimonial-author span {
+    color: #777;
+}
+
+/* Coluna da Direita: Imagem */
+.testimonial-image {
+    flex: 0 0 350px; /* A imagem não cresce, tem largura fixa de 350px */
+    position: relative;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Navegação (Botões) */
+.testimonial-nav {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+/* --- Responsividade para a Seção de Depoimentos --- */
+@media (max-width: 900px) {
+    .testimonial-card {
+        flex-direction: column; /* Empilha a imagem e o texto */
+        padding: 30px;
+        gap: 30px;
+    }
+    .testimonial-image {
+        width: 100%;
+        flex-basis: auto; /* Reseta a largura fixa */
+    }
+    .testimonial-image img {
+        height: 400px;
+    }
+    .quote-mark {
+        bottom: 20px;
+    }
+}
