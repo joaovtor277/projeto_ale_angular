@@ -1,0 +1,114 @@
+/* --- Importação de Fontes e Estilos Gerais --- */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333; /* Cor de texto geral mais escura para legibilidade */
+}
+
+/* --- Estilos da Seção "Vocação" --- */
+
+.secao-vocacao {
+    width: 100%;
+    padding: 100px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+    overflow: hidden;
+}
+
+.secao-vocacao .container {
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUP 1.2s ease-out forwards;
+}
+
+.secao-vocacao .imagem-decorativa {
+    max-width: 150px; /* Tamanho da imagem */
+    height: auto;
+    margin-bottom: 30px; /* Espaço abaixo da imagem */
+    border-radius: 50%; /* Opcional: para deixar a imagem redonda, ideal para ícones */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+
+    /* Animação para a imagem aparecer com um pequeno zoom */
+    opacity: 0;
+    transform: scale(0.8);
+    animation: zoomIn 1s ease-out 0.5s forwards; /* Atraso de 0.5s para aparecer depois do container */
+}
+
+
+.secao-vocacao h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.secao-vocacao .linha-decorativa {
+    width: 80px;
+    height: 4px;
+    background-color: #007bff;
+    margin: 0 auto 30px auto;
+    border-radius: 2px;
+}
+
+.secao-vocacao p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* --- Animações --- */
+@keyframes fadeInUP {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
+/* --- Responsividade para Dispositivos Móveis --- */
+@media (max-width: 768px) {
+    .secao-vocacao {
+        padding: 80px 15px;
+    }
+
+    .secao-vocacao .imagem-decorativa {
+        max-width: 100px; /* Diminui a imagem em telas menores */
+        margin-bottom: 20px;
+    }
+
+    .secao-vocacao h1 {
+        font-size: 2.2rem;
+    }
+
+    .secao-vocacao p {
+        font-size: 1rem;
+    }
+}

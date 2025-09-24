@@ -1,0 +1,66 @@
+/* --- SEÇÃO SOBRE MIM --- */
+
+.section-about {
+    background-color: #f1f3f5; /* Usando o Cinza Gelo da nossa paleta */
+    padding: 100px 190px;
+}
+
+.about-layout {
+    display: flex;
+    align-items: center; /* Alinha a imagem e o texto verticalmente */
+    gap: 60px; /* Espaço entre as colunas */
+}
+
+/* Coluna da Imagem */
+.about-image {
+    flex:1; /* Ocupa 1 parte do espaço */
+    max-width: 400px;
+}
+
+.about-image img {
+    width: 105%;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Coluna do Conteúdo */
+.about-content {
+    flex: 1.5; /* Ocupa 1.5 partes do espaço, dando mais ênfase ao texto */
+}
+
+/* Reutilizando a classe .section-header para consistência */
+.about-content .section-header {
+    text-align: left; /* Alinha à esquerda, pois está numa coluna */
+    margin-bottom: 30px;
+}
+
+.about-content .section-header h2 {
+    font-size: 2.8em;
+    color: #2c3e50; /* Azul Ardósia */
+}
+
+.about-content .section-header .subtitle {
+    font-size: 1.2em;
+    color: #555;
+    font-style: italic;
+}
+
+/* Estilo dos parágrafos de texto */
+.about-content p {
+    font-size: 1.1em;
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas para melhor leitura */
+    color: #4a4a4a; /* Cinza Chumbo para o texto */
+    margin-bottom: 1.5em; /* Espaço entre os parágrafos */
+}
+
+/* --- Responsividade para a Seção Sobre Mim --- */
+@media (max-width: 992px) {
+    .about-layout {
+        flex-direction: column; /* Empilha as colunas em telas menores */
+        text-align: center; /* Centraliza tudo no mobile */
+    }
+
+    .about-content .section-header {
+        text-align: center;
+    }
+}

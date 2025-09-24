@@ -1,0 +1,47 @@
+/* --- SEÇÃO DE EXPERIÊNCIA PROFISSIONAL (VISUAL APRIMORADO) --- */
+
+.section-experience {
+    background-color: #ffffff; /* Fundo branco para destacar as logos */
+    padding: 150px 20px;
+}
+
+/* Estilo para o cabeçalho da seção */
+.section-experience .section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px auto; /* Aumenta a margem inferior para dar mais respiro */
+}
+
+/* Títulos e textos herdarão as fontes globais (Poppins, Roboto) */
+.section-experience .section-header h2 {
+    color: #2c3e50; /* Azul Ardósia */
+    font-size: 2.8em;
+}
+
+/* A grade que segura as logos */
+.experience-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 80px; /* Espaço entre as logos */
+    max-width: 1000px;
+    margin: 0 auto; /* Centraliza a grade */
+}
+
+/* Estilo para cada item da grade (a logo) */
+.experience-item img {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    filter: grayscale(100%) brightness(1.2);
+    opacity: 0.6;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transição com efeito "elástico" */
+}
+
+/* EFEITO APRIMORADO ao passar o mouse */
+.experience-item:hover img {
+    filter: grayscale(0%) brightness(1); /* A logo fica 100% colorida e com brilho normal */
+    opacity: 1;
+    transform: scale(1.1) translateY(-5px); /* Aumenta de tamanho e "levita" um pouco */
+}

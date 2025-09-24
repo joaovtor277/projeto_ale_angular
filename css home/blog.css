@@ -1,0 +1,130 @@
+/* --- SEÇÃO FINAL DO BLOG (PREVIEW NA LANDING PAGE) --- */
+
+.section-final-blog {
+    background-color: #ffffff; /* Fundo branco para uma seção final limpa antes do rodapé */
+    padding: 80px 20px;
+}
+
+/* O header da seção já tem um estilo global, mas podemos garantir o espaçamento */
+.section-final-blog .section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-final-blog .section-header h2 {
+    color: #192a56; /* Azul escuro */
+}
+
+/* Grid que segura os 3 cards */
+.blog-grid-final {
+    display: grid;
+    /* Em telas grandes, 3 colunas. Em menores, se ajusta automaticamente */
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* --- Reutilização dos Estilos dos Cards --- */
+/* O código abaixo é similar ao da outra seção de blog. Se você já o tiver, não precisa repetir.
+   Se não, adicione-o para garantir que os cards fiquem estilizados. */
+
+.blog-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.09);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 25px;
+    flex-grow: 1;
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85em;
+    margin-bottom: 15px;
+    color: #777;
+}
+
+.card-category {
+    background-color: #e2e3e5;
+    color: #333;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.card-content h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+.card-content h3 a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.card-content h3 a:hover {
+    color: #e74c3c;
+}
+
+.card-excerpt {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #555;
+}
+
+.card-footer {
+    padding: 0 25px 25px;
+}
+
+.read-more-link {
+    text-decoration: none;
+    color: #3498db;
+    font-weight: bold;
+}
+
+.read-more-link:hover {
+    text-decoration: underline;
+}
+
+/* Botão "Ver Todos os Artigos" */
+.blog-view-all {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Assumindo que você já tem as classes .btn e .btn-primary estilizadas.
+   Se não, você pode adicionar este estilo básico: */
+.btn.btn-primary {
+    background-color: #e74c3c;
+    color: #ffffff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn.btn-primary:hover {
+    background-color: #c0392b;
+}

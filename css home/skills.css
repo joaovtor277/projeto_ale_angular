@@ -1,6 +1,6 @@
 /* --- SEÇÃO "COMO POSSO AJUDAR?" (SERVIÇOS) --- */
 .section-services {
-    background-color: #706fd3; /* Cor de fundo azul/lilás da imagem */
+    background-color:#F4A261; /* Cor de fundo azul/lilás da imagem */
     color: #ffffff; /* Cor do texto principal (título) */
 }
 
@@ -8,7 +8,7 @@
 .section-services .container {
     background-color: #f1f2f6; /* Cor de fundo cinza claro */
     border-radius: 30px;
-    padding: 60px 300px;
+    padding: 60px 250px;
     max-width: 1200px; /* Aumenta um pouco a largura para comportar melhor os itens */
 }
 

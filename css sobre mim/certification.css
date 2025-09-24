@@ -1,0 +1,165 @@
+/* ==========================================================================
+   SEÇÃO DE CERTIFICAÇÕES E CURSOS (LINHA DO TEMPO)
+   - Código completo e finalizado -
+   ========================================================================== */
+
+   .section-certifications {
+    background-color: #f8f9fa; /* Fundo cinza bem claro da paleta */
+    padding: 100px 80px;
+}
+
+/* --- Cabeçalho da Seção (Centralizado) --- */
+.section-certifications .section-header {
+    text-align: center;
+    max-width: 800px; /* Limita a largura do subtítulo para melhor leitura */
+    margin: 0 auto 60px auto; /* Centraliza o cabeçalho e adiciona espaço abaixo */
+}
+
+.section-certifications .section-header h2 {
+    font-size: 2.8em;
+    color: #2c3e50; /* Azul Ardósia */
+    margin-bottom: 15px;
+}
+
+.section-certifications .section-header p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.7;
+}
+
+
+/* --- Estrutura da Linha do Tempo --- */
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* A linha central vertical */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 3px;
+    background-color: #a0b2d6; /* Azul Suave da paleta */
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1.5px;
+}
+
+/* Contêiner de cada item na timeline */
+.timeline-item {
+    padding: 10px 0;
+    position: relative;
+    width: 50%;
+    margin-bottom: 40px;
+}
+
+/* Alterna os itens para a esquerda */
+.timeline-item:nth-child(odd) {
+    left: 0;
+    padding-right: 50px;
+}
+
+/* Alterna os itens para a direita */
+.timeline-item:nth-child(even) {
+    left: 50%;
+    padding-left: 50px;
+}
+
+/* Ponto decorativo na linha */
+.timeline-dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+    border: 4px solid #fbc531; /* Cor de acento: Dourado Mostarda */
+    top: 25px;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.7); /* Anel claro ao redor */
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+    right: -10px; /* Alinhado na linha central */
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+    left: -10px; /* Alinhado na linha central */
+}
+
+/* Card de conteúdo da certificação */
+.timeline-content {
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(44, 62, 80, 0.08); /* Sombra suave */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px); /* Efeito de "levitar" */
+    box-shadow: 0 12px 40px rgba(44, 62, 80, 0.12);
+}
+
+/* Linha decorativa no topo do card */
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #706fd3; /* Lilás/azul, conectando com outras seções */
+}
+
+/* --- Tipografia dentro do Card --- */
+.timeline-content h3 {
+    font-size: 1.3em;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.timeline-content .institution {
+    font-size: 0.9em;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.timeline-content .details {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #4a4a4a;
+}
+
+
+/* --- Responsividade para Telas Menores (Celulares) --- */
+@media (max-width: 768px) {
+    /* Move a linha para a esquerda */
+    .timeline-container::after {
+        left: 20px;
+    }
+    
+    /* Coloca todos os itens na direita */
+    .timeline-item {
+        width: 100%;
+        padding-left: 60px;
+        padding-right: 15px;
+    }
+
+    .timeline-item:nth-child(odd),
+    .timeline-item:nth-child(even) {
+        left: 0;
+        padding-right: 15px; /* Garante padding uniforme */
+        padding-left: 60px;
+    }
+    
+    /* Move todos os pontos para a linha da esquerda */
+    .timeline-item .timeline-dot {
+        left: 11px;
+        right: auto;
+    }
+}
