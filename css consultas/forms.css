@@ -1,20 +1,39 @@
-/* --- SEÇÃO DE AGENDAMENTO (FORMULÁRIO) --- */
 .section-booking {
-    background-color: #2A4674; /* Cor de fundo suave para a seção */
+    background-color: #0f0161;
+}
+
+/* O contêiner que cria as duas colunas */
+.booking-layout {
+    display: flex;
+   
+    margin: 0 auto;
+    /* Centraliza o conjunto na página */
+}
+
+/* Coluna 1: Imagem */
+.booking-image {
+    width: 800px;
+    height: 800px;
+    flex: 1;
+    /* Faz a imagem ocupar metade do espaço */
+}
+
+.booking-image img {
+    width: 100%;
+    border-radius: 30px;
+
 }
 
 .form-container {
-    max-width: 700px;
-    margin: 0 auto; /* Centraliza o container do formulário */
     background-color: #ffffff;
     padding: 40px;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .form-container h2 {
     text-align: center;
-    color: #192a56; /* Azul escuro do Hero */
+    color: #192a56;
     margin-bottom: 10px;
 }
 
@@ -51,15 +70,14 @@
 .booking-form input[type="tel"]:focus,
 .booking-form textarea:focus {
     outline: none;
-    border-color: #3498db; /* Azul do botão secundário */
+    border-color: #3498db;
     box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
 }
 
 .booking-form textarea {
-    resize: vertical; /* Permite que o usuário redimensione a altura */
+    resize: vertical;
 }
 
-/* Estilizando os Radio Buttons */
 .form-group fieldset {
     border: none;
     padding: 0;
@@ -68,7 +86,7 @@
 
 .radio-group {
     display: flex;
-    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -81,15 +99,13 @@
 
 .radio-group input[type="radio"] {
     margin-right: 8px;
-    /* Para um visual mais moderno, considere usar custom radio buttons */
 }
 
-/* Botão de Envio */
 .btn-submit {
     display: block;
     width: 100%;
     padding: 15px;
-    background-color: #e74c3c; /* Vermelho/Rosa do botão primário */
+    background-color: #e74c3c;
     color: #ffffff;
     border: none;
     border-radius: 5px;
@@ -105,13 +121,11 @@
     transform: translateY(-2px);
 }
 
-booking-layout {
-    display: flex;
-    align-items: center; /* Alinha verticalmente a imagem e o formulário */
-    gap: 50px; /* Espaço entre a imagem e o formulário */
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 10px B30px rgba(0, 0, 0, 0.1);
+/* --- Responsividade para Telas Menores (Celulares) --- */
+@media (max-width: 992px) {
+    .booking-layout {
+        /* Empilha a imagem sobre o formulário */
+        flex-direction: column;
+        gap: 40px;
+    }
 }
-

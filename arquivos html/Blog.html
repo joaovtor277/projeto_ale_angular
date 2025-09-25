@@ -6,7 +6,9 @@
     <title>Projeto IncluaKids</title>
     <link rel="stylesheet" href="/arquivos css/base.css">
     <link rel="stylesheet" href="/arquivos css/home.css">
-</head>
+    <link rel="stylesheet" href="/css blog/blog.css">
+    <link rel="stylesheet" href="/arquivos.js/blog.js">
+    <link rel="stylesheet" href="/arquivos.js/artigos.js">
 <body>
     <header>
         <a href="/arquivos html/home.html"><img class="logo_principal" src="/arquivos img/logo + imagem.png" alt=""></a>
@@ -20,13 +22,19 @@
         </nav>
     </header>
 
-    <main>
-        <section id="depoimentos" class="section section-testimonials">
-            <div class="container">
-                <h2></h2>
+    <main class="blog-page-main">
+        <div class="container">
+            <div class="page-header">
+                <h1>Nosso Blog</h1>
+                <p>Aqui você encontra os últimos artigos, dicas e reflexões sobre educação inclusiva e desenvolvimento.</p>
             </div>
-        </section>
+
+            <div id="featured-article-container"></div>
+
+            <div id="article-list-container"></div>
+        </div>
     </main>
+        
 
     <footer class="site-footer">
         <div class="footer-container">
@@ -75,7 +83,9 @@
                 Feito com &hearts; para apoiar jornadas de aprendizagem em todo lugar!
             </p>
         </div>
+
     </footer>
+    <script src="/arquivos.js/blog.js"></script>
 
     </body>
 </html>
