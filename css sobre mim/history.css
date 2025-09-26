@@ -1,7 +1,7 @@
 /* --- SEÇÃO SOBRE MIM --- */
 
 .section-about {
-    background-color: #f1f3f5; /* Usando o Cinza Gelo da nossa paleta */
+    background-color: #1f0b5f; /* Usando o Cinza Gelo da nossa paleta */
     padding: 100px 190px;
 }
 
@@ -36,12 +36,12 @@
 
 .about-content .section-header h2 {
     font-size: 2.8em;
-    color: #2c3e50; /* Azul Ardósia */
+    color: #ffffff; /* Azul Ardósia */
 }
 
 .about-content .section-header .subtitle {
     font-size: 1.2em;
-    color: #555;
+    color: #ffffff;
     font-style: italic;
 }
 
@@ -49,7 +49,7 @@
 .about-content p {
     font-size: 1.1em;
     line-height: 1.8; /* Aumenta o espaçamento entre linhas para melhor leitura */
-    color: #4a4a4a; /* Cinza Chumbo para o texto */
+    color: #ffffff; /* Cinza Chumbo para o texto */
     margin-bottom: 1.5em; /* Espaço entre os parágrafos */
 }
 

@@ -1,6 +1,6 @@
 /* --- SEÇÃO "COMO POSSO AJUDAR?" (SERVIÇOS) --- */
 .section-services {
-    background-color:#F4A261; /* Cor de fundo azul/lilás da imagem */
+    background-color:#ffffff; /* Cor de fundo azul/lilás da imagem */
     color: #ffffff; /* Cor do texto principal (título) */
 }
 
@@ -14,13 +14,13 @@
 
 /* Cabeçalho da seção */
 .section-services .section-header h2 {
-    color: #706fd3; /* Cor do título */
+    color: #120853; /* Cor do título */
     font-size: 2.8em;
     margin-bottom: 10px;
 }
 
 .section-services .section-header p {
-    color: #333333;
+    color: #120853;
     font-size: 1.1em;
     max-width: 700px;
     margin: 0 auto 40px auto;
@@ -69,7 +69,7 @@
 }
 
 .service-item h3 {
-    color: #8e44ad; /* Cor roxa do texto */
+    color: #120853; /* Cor roxa do texto */
     font-size: 1.4em;
     font-weight: 600;
 }

@@ -1,6 +1,6 @@
 /* --- SEÇÃO HERO (INÍCIO) --- */
 .section-hero {
-    background-color: #A8DADC; /* Azul Escuro do modelo */
+    background-color: #120853; /* Azul Escuro do modelo */
     color: #ffffff; /* Texto branco para contraste */
     padding: 100px 0; /* Aumenta o padding para dar mais espaço */
     min-height: auto; /* Remove a altura mínima anterior */
@@ -40,14 +40,14 @@
     font-size: 3.1em; 
     line-height: 1.2;
     margin-bottom: 20px;
-    color: #1D3557;
+    color: #ffffff;
 }
 
 .hero-content p {
     font-size: 1.1em;
     line-height: 1.6;
     margin-bottom: 30px;
-    color: #2c3e50;
+    color: #ffffff;
 }
 
 .hero-actions {

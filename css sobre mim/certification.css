@@ -4,7 +4,7 @@
    ========================================================================== */
 
    .section-certifications {
-    background-color: #f8f9fa; /* Fundo cinza bem claro da paleta */
+    background-color: #421089; /* Fundo cinza bem claro da paleta */
     padding: 100px 80px;
 }
 
@@ -17,13 +17,13 @@
 
 .section-certifications .section-header h2 {
     font-size: 2.8em;
-    color: #2c3e50; /* Azul Ardósia */
+    color: #ffffff; /* Azul Ardósia */
     margin-bottom: 15px;
 }
 
 .section-certifications .section-header p {
     font-size: 1.1em;
-    color: #555;
+    color: #ffffff;
     line-height: 1.7;
 }
 

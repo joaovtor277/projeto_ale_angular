@@ -1,100 +1,139 @@
-.blog-page-main {
-    background-color: #fdf5e6; /* Tom de bege/creme da referência */
+/* =================================
+   ESTILOS PARA A PÁGINA FAQ
+   ================================= */
+
+/* Estilo geral do container principal da página */
+.faq-page-main {
+    background-color: #fdfcfa; /* Um fundo suave, quase branco */
     padding: 60px 0;
+    font-family: 'Arial', sans-serif; /* IMPORTANTE: Use a mesma fonte principal do seu site */
 }
 
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Cabeçalho da página (Título e Subtítulo) */
 .page-header {
     text-align: center;
     margin-bottom: 50px;
 }
 
 .page-header h1 {
-    font-size: 3em;
+    font-size: 2.5rem;
+    color: #333;
     margin-bottom: 10px;
 }
 
 .page-header p {
-    font-size: 1.1em;
-    color: #555;
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-/* --- Artigo em Destaque --- */
-.featured-article {
-    margin-bottom: 50px;
-    background-color: #ffffff;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    overflow: hidden;
-    transition: box-shadow 0.3s ease;
+/* Título das categorias de perguntas */
+.faq-category-title {
+    font-size: 1.8rem;
+    color: #5a67d8; /* Um tom de roxo/azul para destaque */
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-.featured-article:hover {
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+/* Container de cada item do FAQ (pergunta + resposta) */
+.faq-item {
+    border-bottom: 1px solid #e2e8f0;
+}
+.faq-item:last-child {
+    border-bottom: none;
 }
 
-.featured-article-link {
-    text-decoration: none;
-    color: inherit;
+/* Estilo da pergunta (tag <summary>) */
+.faq-item summary {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3748;
+    padding: 20px 0;
+    cursor: pointer;
+    position: relative;
+    list-style: none; /* Remove o marcador padrão do <details> */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.2s ease-in-out;
 }
 
-.featured-image img {
-    width: 100%;
-    height: auto;
-    display: block;
+.faq-item summary:hover {
+    color: #5a67d8;
 }
 
-.featured-content {
-    padding: 30px;
+/* Ícone de seta (adicionado com CSS) */
+.faq-item summary::after {
+    content: '+'; /* Símbolo de "mais" quando fechado */
+    font-size: 2rem;
+    font-weight: 300;
+    color: #5a67d8;
+    transition: transform 0.3s ease-in-out;
 }
 
-.featured-content h2 {
-    font-size: 2em;
+/* Muda o ícone para "menos" quando a resposta está aberta */
+.faq-item details[open] > summary::after {
+    content: '−'; /* Símbolo de "menos" */
+    transform: rotate(180deg);
+}
+
+
+/* Estilo da resposta (o conteúdo dentro de <details>) */
+.faq-content {
+    padding: 0 10px 20px 10px;
+    color: #4a5568;
+    line-height: 1.6;
+}
+
+.faq-content p {
+    margin: 0;
+}
+
+.faq-content strong {
+    color: #333;
+}
+
+
+/* Chamada para Ação (CTA) no final da página */
+.faq-footer-cta {
+    text-align: center;
+    margin-top: 60px;
+    padding: 40px;
+    background-color: #f0f4ff; /* Fundo suave para destacar a seção */
+    border-radius: 8px;
+}
+
+.faq-footer-cta h3 {
+    font-size: 1.8rem;
+    color: #333;
     margin-bottom: 10px;
 }
 
-.article-meta {
-    font-size: 0.9em;
-    color: #777;
+.faq-footer-cta p {
+    color: #555;
+    margin-bottom: 25px;
 }
 
-/* --- Lista de Artigos --- */
-.list-article-item {
-    background-color: #ffffff;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.list-article-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-.list-article-link {
-    display: flex;
-    align-items: center;
-    padding: 20px;
+.cta-button {
+    display: inline-block;
+    background-color: #5a67d8;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
     text-decoration: none;
-    color: inherit;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.list-article-thumbnail img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right: 20px;
-}
-
-.list-article-content h3 {
-    font-size: 1.3em;
-    margin-bottom: 8px;
-}
-
-/* Responsividade */
-@media(max-width: 768px) {
-    .featured-content h2 { font-size: 1.5em; }
-    .list-article-thumbnail img { width: 80px; height: 80px; }
-    .list-article-content h3 { font-size: 1.1em; }
+.cta-button:hover {
+    background-color: #434190; /* Cor mais escura no hover */
 }
