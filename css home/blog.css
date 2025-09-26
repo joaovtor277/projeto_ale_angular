@@ -19,7 +19,7 @@
     font-size: 0.9rem;
     font-weight: bold;
     color: #ffffff; /* Cor de destaque, a mesma do FAQ */
-    background-color: #e6e9ff;
+    background-color: #3747be;
     padding: 8px 15px;
     border-radius: 20px;
     margin-bottom: 15px;
@@ -60,8 +60,8 @@
 }
 
 .beneficio-icon {
-    width: 28px;  /* Ajuste o tamanho do seu ícone */
-    height: 28px;
+    width: 70px;  /* Ajuste o tamanho do seu ícone */
+    height: 70px;
 }
 
 /* Estilo para o botão principal */
