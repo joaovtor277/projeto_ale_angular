@@ -4,7 +4,7 @@
 
 /* Estilo geral do container principal da página */
 .faq-page-main {
-    background-color: #fdfcfa; /* Um fundo suave, quase branco */
+    background-color: #ffffff; /* Um fundo suave, quase branco */
     padding: 60px 0;
     font-family: 'Arial', sans-serif; /* IMPORTANTE: Use a mesma fonte principal do seu site */
 }

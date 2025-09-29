@@ -1,34 +1,53 @@
 .section-booking {
     background-color: #0f0161;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-height: 100vh; /* Se você tem um navbar fixo, isso pode causar scroll. Removi para o exemplo. */
 }
 
 /* O contêiner que cria as duas colunas */
 .booking-layout {
     display: flex;
-   
-    margin: 0 auto;
-    /* Centraliza o conjunto na página */
+    flex-direction: row;
+    max-width: 1800px; /* Mantém sua largura máxima desejada */
+    width: 90%; /* Ajuste a largura percentual do layout dentro do section-booking */
+    background-color: #fff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    gap: 30px;
+    /* <--- AQUI ESTÁ O AJUSTE PARA O ESPAÇAMENTO! */
+                 /* Você pode ajustar o valor (ex: 20px, 40px) conforme desejar. */
 }
 
-/* Coluna 1: Imagem */
+
 .booking-image {
-    width: 810px;
-    height: 800px;
     flex: 1;
-    /* Faz a imagem ocupar metade do espaço */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 50px ;
+    
 }
 
 .booking-image img {
-    width: 100%;
-    border-radius: 30px;
-
+/* Garante que a imagem preencha a altura do seu contêiner */
+    object-fit: cover;
+    display: block;
 }
 
 .form-container {
+    flex: 1; /* Faz o formulário ocupar o restante do espaço disponível */
+            /* Se a imagem tiver flex: 2, o formulário terá flex: 1, sendo metade do tamanho da imagem */
     background-color: #ffffff;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 50px;
+    /* As bordas arredondadas já estão no booking-layout, então você pode remover as do form-container
+       se quiser que o padding da imagem vá até a borda do booking-layout.
+       Se mantiver, ele se aplica apenas ao form-container. */
+    border-radius: 0 15px 15px 0;
 }
 
 .form-container h2 {
@@ -124,8 +143,35 @@
 /* --- Responsividade para Telas Menores (Celulares) --- */
 @media (max-width: 992px) {
     .booking-layout {
-        /* Empilha a imagem sobre o formulário */
-        flex-direction: column;
-        gap: 40px;
+        flex-direction: column; /* Empilha a imagem sobre o formulário */
+        gap: 20px; /* Adiciona um pequeno espaço entre a imagem e o formulário empilhados */
+        max-width: 90%; /* Ajusta a largura máxima para mobile */
+        width: auto; /* Remove largura fixa para mobile */
+    }
+
+    .booking-image {
+        flex: auto; /* A imagem ocupa o espaço necessário */
+        height: 250px; /* Define uma altura fixa para a imagem em mobile */
+        border-radius: 15px 15px 0 0; /* Arredonda as bordas superiores em mobile */
+    }
+
+    .form-container {
+        border-radius: 0 0 15px 15px; /* Arredonda as bordas inferiores em mobile */
+        padding: 30px; /* Ajusta o padding do formulário para mobile */
+    }
+}
+
+/* Ajuste para telas um pouco maiores que mobile, mas menores que desktop */
+@media (min-width: 993px) and (max-width: 1400px) {
+    .booking-layout {
+        max-width: 95%; /* Use mais largura em telas maiores */
+    }
+    .form-container {
+        padding: 30px;
+    }
+}
+@media (min-width: 1401px) {
+    .form-container {
+        padding: 60px;
     }
 }
